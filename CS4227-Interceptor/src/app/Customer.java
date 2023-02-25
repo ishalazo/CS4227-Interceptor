@@ -1,3 +1,5 @@
+package app;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -17,9 +19,13 @@ public class Customer {
         return name;
     }
 
-    public String statement() { 
+    public List<Rental> getRentals() {
+        return rentals;
+    }
+
+    public String statement() {
         String result = "Rental Record for " + name + "\n";
-        for (Rental each : rentals) { 
+        for (Rental each : rentals) {
             // values for rental
             result += "\t" + each.getMovie().getTitle() + "\t" + String.valueOf(each.getCharge()) + "\n";
         }
@@ -36,7 +42,7 @@ public class Customer {
             result += each.getCharge();
         }
         return result;
-    } 
+    }
 
     private int frequentRenterPoints() {
         int totalRenterPoints = 0;

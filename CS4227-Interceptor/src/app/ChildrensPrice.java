@@ -1,3 +1,5 @@
+package app;
+
 public class ChildrensPrice extends Price {
     public double getCharge(int daysRented) {
         double result = 1.5;

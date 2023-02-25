@@ -1,6 +1,8 @@
+package app;
+
 public class Movie {
     private String title;
-    private Price price; 
+    private Price price;
 
     public Movie(String title, Price price) {
         this.title = title;

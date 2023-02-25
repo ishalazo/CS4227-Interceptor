@@ -1,3 +1,5 @@
+package app;
+
 public class NewReleasePrice extends Price {
     public double getCharge(int daysRented) {
         return (double) (daysRented * 3);

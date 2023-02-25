@@ -1,3 +1,5 @@
+package app;
+
 public class RegularPrice extends Price {
     public double getCharge(int daysRented) {
         double result = 2;
