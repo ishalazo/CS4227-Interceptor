@@ -16,6 +16,7 @@ public class Driver {
         // Call point of interception 1
         customer1.addRental(rental);
 
+        System.out.println();
         
         // Discount Interception
         DiscountInterceptor discountInterceptor = new DiscountInterceptor();

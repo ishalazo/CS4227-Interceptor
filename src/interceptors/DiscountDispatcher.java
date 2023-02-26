@@ -26,8 +26,8 @@ public class DiscountDispatcher {
 
     public void interceptDiscount(DiscountContext discountContext) {
         for (Interceptor i : interceptors) {
-            DiscountInterceptor rdi = (DiscountInterceptor) i;
-            rdi.interceptDiscount(discountContext);
+            DiscountInterceptor di = (DiscountInterceptor) i;
+            di.interceptDiscount(discountContext);
         }
     }
 }

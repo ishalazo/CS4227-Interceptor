@@ -26,8 +26,8 @@ public class RentalWarningDispatcher {
 
     public void interceptCustomerRental(RentalContext rentalContext) {
         for (Interceptor i : interceptors) {
-            RentalWarningInterceptor rdi = (RentalWarningInterceptor) i;
-            rdi.interceptCustomerRental(rentalContext);
+            RentalWarningInterceptor rwi = (RentalWarningInterceptor) i;
+            rwi.interceptCustomerRental(rentalContext);
         }
     }
 }

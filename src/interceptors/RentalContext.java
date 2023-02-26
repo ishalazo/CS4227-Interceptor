@@ -9,8 +9,12 @@ public class RentalContext {
         this.rental = rental;
     }
 
-    public Rental getRental() {
-        return rental;
+    public int getDaysRented() {
+        return rental.getDaysRented();
+    }
+
+    public String getTitle(){
+        return rental.getMovie().getTitle();
     }
 
 }
