@@ -2,17 +2,17 @@ package interceptors;
 
 import java.util.ArrayList;
 
-public class RentalDispatcher {
-    private static RentalDispatcher instance;
+public class DiscountDispatcher {
+    private static DiscountDispatcher instance;
     private ArrayList<Interceptor> interceptors;
 
-    public RentalDispatcher() {
+    public DiscountDispatcher() {
         interceptors = new ArrayList<Interceptor>();
     }
 
-    public static RentalDispatcher getInstance() {
+    public static DiscountDispatcher getInstance() {
         if (instance == null)
-            instance = new RentalDispatcher();
+            instance = new DiscountDispatcher();
         return instance;
     }
 
@@ -24,10 +24,10 @@ public class RentalDispatcher {
         interceptors.remove(i);
     }
 
-    public void interceptCustomerRental(RentalContext rentalContext) {
+    public void interceptDiscount(DiscountContext discountContext) {
         for (Interceptor i : interceptors) {
-            RentalDaysInterceptor rdi = (RentalDaysInterceptor) i;
-            rdi.interceptCustomerRental(rentalContext);
+            DiscountInterceptor rdi = (DiscountInterceptor) i;
+            rdi.interceptDiscount(discountContext);
         }
     }
 }
