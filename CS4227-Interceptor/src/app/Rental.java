@@ -1,6 +1,6 @@
 package app;
 
-class Rental {
+public class Rental {
 	private Movie movie;
 	private int daysRented;
 
@@ -23,6 +23,10 @@ class Rental {
 
 	public double getCharge() {
 		return movie.getCharge(daysRented);
+	}
+
+	public void setDaysRented(int daysRented) {
+		this.daysRented = daysRented;
 	}
 
 }

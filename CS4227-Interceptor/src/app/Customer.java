@@ -3,15 +3,20 @@ package app;
 import java.util.ArrayList;
 import java.util.List;
 
+import interceptors.RentalContext;
+
 public class Customer {
     private String name;
-    private List<Rental> rentals = new ArrayList<Rental>();
+    private List<Rental> rentals;
 
     public Customer(String name) {
         this.name = name;
+        rentals = new ArrayList<Rental>();
     }
 
     public void addRental(Rental rental) {
+        // RentalContext co = new RentalContext(rental);
+
         rentals.add(rental);
     }
 
@@ -27,11 +32,11 @@ public class Customer {
         String result = "Rental Record for " + name + "\n";
         for (Rental each : rentals) {
             // values for rental
-            result += "\t" + each.getMovie().getTitle() + "\t" + String.valueOf(each.getCharge()) + "\n";
+            result += "\t" + each.getMovie().getTitle() + "\t" + each.getCharge() + "\n";
         }
         // footer lines
-        result += "Amount owed is " + String.valueOf(getTotalCharge()) + "\n";
-        result += "You earned " + String.valueOf(frequentRenterPoints()) + " frequent renter points";
+        result += "Amount owed is " + getTotalCharge() + "\n";
+        result += "You earned " + frequentRenterPoints() + " frequent renter points";
         return result;
 
     }
