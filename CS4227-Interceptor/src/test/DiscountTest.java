@@ -12,7 +12,6 @@ import app.ChildrensPrice;
 import app.Customer;
 import app.Movie;
 import app.NewReleasePrice;
-import app.RegularPrice;
 import app.Rental;
 import interceptors.DiscountDispatcher;
 import interceptors.DiscountInterceptor;
